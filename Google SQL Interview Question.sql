@@ -33,8 +33,10 @@
           On 07/11/2022, there are only two measurements. In chronological order, the first measurement (odd-numbered) is 1124.50, and
           the second measurement(even-numbered) is 1234.14.
       */
+/*
       Solution: 
-      */
+*/
+
       SELECT 
              date_trunc('day', measurement_time) AS measurement_day, 
              SUM(CASE 
