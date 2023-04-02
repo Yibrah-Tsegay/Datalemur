@@ -1,4 +1,4 @@
-?*
+/*
       Assume you are given the table containing measurement values obtained from a Google sensor over several days. Measurements are taken several times within a given day.
 
       Write a query to obtain the sum of the odd-numbered and even-numbered measurements on a particular day, in two different columns. Refer to the Example Output below for the output format.
@@ -34,7 +34,7 @@
           the second measurement(even-numbered) is 1234.14.
       */
       Solution: 
-      
+      */
       SELECT 
              date_trunc('day', measurement_time) AS measurement_day, 
              SUM(CASE 
@@ -48,13 +48,14 @@
                     measurements) a
       GROUP BY date_trunc('day', measurement_time)
       ORDER BY date_trunc('day', measurement_time)
-      
+/*
       Resulting Table: 
       
           measurement_day	      odd_sum	     even_sum
           07/10/2022 00:00:00	  2355.75	       1662.74
           07/11/2022 00:00:00	  2377.12	       2480.70
           07/12/2022 00:00:00	  2903.40	       1244.30
+  */
       
       
           
